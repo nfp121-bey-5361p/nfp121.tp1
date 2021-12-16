@@ -50,9 +50,24 @@ public class AuditeurCNAM {
         loginName += "_";
         loginName += prenom().charAt(0);
         loginName = loginName.toLowerCase();
-        loginName = loginName.replaceAll("é|è", "e").replaceAll("à|â", "a");
-        loginName = loginName.replaceAll("[^a-z]+", "_");
+        loginName = this.eliminerAccents(loginName);
+        loginName = loginName.replaceAll("[^a-z]", "_");
         return loginName;
+    }
+    
+    /**
+     *  Remplace les caractères accentués d'une chaine de caractères avec leur lettre équivalente
+     *  non accentué.
+     *  
+     *  @return chaine de charactere avec caractères non accentués
+     */
+    private String eliminerAccents(String s) {
+        return s.replaceAll("è|é|ê|ë", "e")
+                 .replaceAll("à|á|â|æ", "a")
+                 .replaceAll("ì|í|î|ï", "i")
+                 .replaceAll("ò|ó|ô|œ", "o")
+                 .replaceAll("ù|ú|û|ü", "u")
+                 .replaceAll("ý|ÿ", "y");
     }
 
     /**
