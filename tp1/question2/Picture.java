@@ -18,6 +18,7 @@ import question1.Triangle;
 public class Picture {
     private Square wall;
     private Square window;
+    private Square ground;
     private Triangle roof;
     private Circle sun;
     private Circle sun2;
@@ -33,6 +34,13 @@ public class Picture {
      * Draw this picture.
      */
     public void draw() {
+        ground = new Square();
+        ground.changeColor("black");
+        ground.moveVertical(180);
+        ground.moveHorizontal(-60);
+        ground.changeSize(300);
+        ground.makeVisible();
+        
         wall = new Square();
         wall.moveVertical(80);
         wall.changeSize(100);
@@ -90,6 +98,15 @@ public class Picture {
             roof.changeColor("green");
             sun.changeColor("blue");
             sun.changeColor("yellow");
+        }
+    }
+    
+    /**
+     *  Make the blue sun set
+     */
+    public void sunset() {
+        if (ground != null) {
+            sun.slowMoveVertical(300);
         }
     }
 
