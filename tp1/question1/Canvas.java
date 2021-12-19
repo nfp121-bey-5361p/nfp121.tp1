@@ -25,6 +25,8 @@ public class Canvas {
 
     /**
      * Factory method to get the canvas singleton object.
+     * 
+     * @return the canvas singleton object
      */
     public static Canvas getCanvas() {
         if (canvasSingleton == null) {
@@ -126,7 +128,7 @@ public class Canvas {
     /**
      * Set the foreground colour of the Canvas.
      * 
-     * @param newColour
+     * @param colorString
      *            the new colour for the foreground of the Canvas
      */
     public void setForegroundColor(String colorString) {

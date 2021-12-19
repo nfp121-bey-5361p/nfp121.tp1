@@ -82,6 +82,8 @@ public class Square {
 
     /**
      * Move the square vertically by 'distance' pixels.
+     * 
+     * @param distance
      */
     public void moveVertical(int distance) {
         erase();
@@ -91,6 +93,8 @@ public class Square {
 
     /**
      * Slowly move the square horizontally by 'distance' pixels.
+     * 
+     * @param distance
      */
     public void slowMoveHorizontal(int distance) {
         int delta;
@@ -110,6 +114,8 @@ public class Square {
 
     /**
      * Slowly move the square vertically by 'distance' pixels.
+     * 
+     * @param distance
      */
     public void slowMoveVertical(int distance) {
         int delta;
@@ -128,7 +134,7 @@ public class Square {
     }
 
     /**
-     * Change the size to the new size (in pixels). Size must be >= 0.
+     * Change the size to the new size (in pixels). Size must be greater or equal 0.
      */
     public void changeSize(int newSize) {
         erase();

@@ -74,6 +74,8 @@ public class Circle {
 
     /**
      * Move the circle horizontally by 'distance' pixels.
+     * 
+     * @return distance
      */
     public void moveHorizontal(int distance) {
         erase();
@@ -83,6 +85,8 @@ public class Circle {
 
     /**
      * Move the circle vertically by 'distance' pixels.
+     * 
+     * @return distance
      */
     public void moveVertical(int distance) {
         erase();
@@ -92,6 +96,8 @@ public class Circle {
 
     /**
      * Slowly move the circle horizontally by 'distance' pixels.
+     * 
+     * @return distance
      */
     public void slowMoveHorizontal(int distance) {
         int delta;
@@ -111,6 +117,8 @@ public class Circle {
 
     /**
      * Slowly move the circle vertically by 'distance' pixels.
+     * 
+     * @return distance
      */
     public void slowMoveVertical(int distance) {
         int delta;
@@ -129,7 +137,9 @@ public class Circle {
     }
 
     /**
-     * Change the size to the new size (in pixels). Size must be >= 0.
+     * Change the size to the new size (in pixels). Size must be greater or equal 0.
+     * 
+     * @param newDiameter
      */
     public void changeSize(int newDiameter) {
         erase();
@@ -140,6 +150,8 @@ public class Circle {
     /**
      * Change the color. Valid colors are "red", "yellow", "blue", "green",
      * "magenta" and "black".
+     * 
+     * @param newColor
      */
     public void changeColor(String newColor) {
         color = newColor;
